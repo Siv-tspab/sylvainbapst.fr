@@ -1,0 +1,265 @@
+* {
+    font-family: "OrkneyRegular", sans-serif;
+    color: #fdfdfd;
+    li {
+        list-style: none;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
+        &:hover {
+            color: #cecece;
+        }
+        i {
+            transition: 0.5s;
+            &:hover {
+                color: #cecece;
+            }
+        }
+    }
+    p,
+    h2,
+    h1 {
+        margin: 0;
+    }
+}
+
+// --------------------------------------- HEADER ------------------------------------- //
+
+.arrow {
+    position: fixed;
+    font-size: 3rem;
+    bottom: 1rem;
+    left: 2rem;
+    z-index: 8;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(245, 118, 0, 0.8), rgba(205, 0, 0, 0.541));
+    background-repeat: no-repeat;
+    z-index: 9;
+    .navbar {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        margin: 1rem 0;
+        padding: 10px 15px;
+        background-color: #f6903793;
+        backdrop-filter: blur(5px);
+        border-radius: 30px;
+        z-index: 10;
+        li {
+            font-size: 22px;
+            font-weight: 600;
+            padding: 5px 10px;
+            background-color: #8f65b300;
+        }
+    }
+    .link {
+        position: fixed;
+        right: 4%;
+        margin: 1rem 0;
+        display: flex;
+        gap: 10px;
+        font-size: 3rem;
+        z-index: 10;
+        a {
+            text-decoration: none;
+            transition: 0.5s;
+        }
+    }
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h1 {
+            font-size: 64px;
+        }
+        p {
+            height: calc(1px / 4);
+            width: 50%;
+            margin: auto;
+            margin-bottom: 7px;
+            background-color: #fdfdfd9a;
+        }
+    }
+}
+
+// --------------------------------------- MAIN ------------------------------------- //
+
+main {
+    p {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 28px;
+        margin-block: 8px;
+    }
+    .section-intro {
+        position: relative;
+        height: 100vh;
+        background: linear-gradient(180deg, rgba(205, 0, 0, 0.541), rgba(109, 10, 223, 0.8));
+        background-repeat: no-repeat;
+        z-index: 7;
+        .intro {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .section-real {
+        position: relative;
+        height: 100vh;
+        background: linear-gradient(180deg, rgba(109, 10, 223, 0.8), rgba(205, 0, 0, 0.541));
+        background-repeat: no-repeat;
+        z-index: 7;
+        .real {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: right;
+        }
+    }
+}
+
+// --------------------------------------- FOOTER ------------------------------------- //
+
+footer {
+    .section-contact {
+        position: relative;
+        height: 100vh;
+        background: linear-gradient(180deg, rgba(205, 0, 0, 0.541), rgba(245, 118, 0, 0.8));
+        background-repeat: no-repeat;
+        .contact {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50vw;
+            margin-inline: 25vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
+            gap: 5px;
+            .input{
+                padding: 15px 18px;
+                background-color: #fdfdfd;
+                color: rgb(61, 61, 61);
+                border: #fdfdfd;
+                border-radius: 3px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            #contact-title {
+                font-size: 28px;
+                margin-block: 1rem;
+                grid-column: 1/3;
+                grid-row: 1/2;
+            }
+            #email {
+                grid-column: 1/3;
+                grid-row: 3/4;
+            }
+            #message{
+                padding-top: 20px;
+                grid-column: 1/3;
+                grid-row: 4/7;
+                resize: none;
+            }
+            #btn {
+                cursor: pointer;
+                grid-column: 1/3;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        .navbar {
+            li {
+                font-size: 18px;
+            }
+        }
+        .link {
+            font-size: 2.5rem;
+            right: 3%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        .link {
+            bottom: 1rem;
+            gap: 2px;
+        }
+    }
+    footer{
+        .contact{
+            width: 45%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// .contact {
+//     height: max-content;
+//     width: 35%;
+//     box-sizing: content-box;
+//     position: absolute;
+//     top: 40%;
+//     left: 50%;
+//     transform: translate(-50%, -25%);
+//     display: flex;
+//     flex-direction: column;
+//     gap: 5px;
+//     h2 {
+//         margin-block: 1rem;
+//     }
+//     .names {
+//         display: grid;
+//         grid-template-columns: calc(50% - 2.5px) calc(50% - 2.5px);
+//         box-sizing: content-box;
+//         gap: 5px;
+//         .firstName,
+//         .lastName {
+//             max-width: 100%;
+//         }
+//     }
+//     textarea {
+//         resize: none;
+//     }
+//     .input,
+//     .btn {
+//         max-width: 100%;
+//         padding: 12px 18px;
+//         background-color: white;
+//         color: rgb(61, 61, 61);
+//         border: white;
+//         border-radius: 3px;
+//         &:focus {
+//             outline: none;
+//         }
+//     }
+//     button {
+//         cursor: pointer;
+//     }
+// }

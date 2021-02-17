@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="http://fontlibrary.org/face/orkney" type="text/css"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SylvainBapst</title>
+</head>
+
+<body>
+    <div class="arrow">
+        <a href="#topPage"><i class="las la-arrow-circle-up"></i></a>
+    </div>
+    <header>
+        <span id="topPage"></span>
+        <ul class="navbar">
+            <li><a href="#intro">Présentation</a></li>
+            <li><a href="#real">Réalisations</a></li>
+            <li><a href="#contact">Contacter</a></li>
+        </ul>
+        <div class="link">
+            <a class="linkedIn" href="https://www.linkedin.com/in/sylvain-bapst" target="_blank"><i
+                    class="lab la-linkedin-in"></i></a>
+            <a class="gitHub" href="https://www.github.com/SylvainBapst" target="_blank"><i
+                    class="lab la-github"></i></a>
+        </div>
+        <div class="title">
+            <h1>Sylvain Bapst</h1>
+            <p></p>
+            <h2>Développeur web</h2>
+        </div>
+    </header>
+    <main>
+        <section class="section-intro" id="intro">
+            <div class="intro">
+                <h2>Présentation</h2>
+                <p>Je suis développeur et intégrateur web mobile en cours de formation à Webforce3 Toulouse.
+                    J'ai pour objectif de devenir développeur web et pour cela je suis à la recherche d'une entreprise
+                    qui pourrait m'accueillir pour
+                    réaliser une alternance ou un stage. Je suis un autodidacte, j'aime apprendre et relever de nouveaux
+                    défis. N'hésitez pas à me contacter avec le <a href="#contact">forumlaire de contact</a> en bas de
+                    cette page pour plus d'informations!</p>
+            </div>
+        </section>
+        <section class="section-real" id="real">
+            <div class="real">
+                <h2>Mes rélisations</h2>
+                <p>Ce portfolio est ma première réalisation en HTML / CSS / JS / PHP (il sera amené à
+                    évoluer!).<br>D'autres choses sont à venir!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="section-contact" id="contact">
+            <form class="contact" action="contact.php" method="POST">
+                <h2 id="contact-title">Me contacter</h2>
+                <input type="text" name="lastName" class="input" id="lastName" placeholder="Nom">
+                <input type="text" name="firstName" class="input" id="firstName" placeholder="Prénom">
+                <input type="email" name="email" class="input" id="email" placeholder="Email">
+                <textarea type="text" name="message" class="input" id="message" rows="10"
+                    placeholder="Message"></textarea>
+                <button type="submit" class="input" id="btn">Envoyer</button>
+            </form>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
